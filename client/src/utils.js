@@ -31,8 +31,11 @@
            "http://localhost:7545"
          );
          const web3 = new Web3(provider);
-         console.log("No web3 instance injected, using Local web3.");
          resolve(web3);
+         window.alert(
+           "Non-Ethereum browser detected. You should consider trying MetaMask!"
+         );
+         
        }
      });
    });
